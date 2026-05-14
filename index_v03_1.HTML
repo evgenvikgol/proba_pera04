@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>    <!--*************************************************************-->	
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_website_v03_1</title>
+    <link rel="stylesheet" href="styles_v03.css">
+  </head>
+  
+  
+  
+  <body>
+    <header><!--*************************************************************-->
+<img src="https://media.istockphoto.com/id/619403548/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%B2%D0%B5%D1%82-%D0%B7%D0%BE%D0%B4%D0%B8%D0%B0%D0%BA%D0%B0-%D0%BE%D0%B2%D0%BD%D0%B0.jpg?s=612x612&w=0&k=20&c=OD7wOqP0jiqUU4ur-9XdGuHeX9drrB2_xBl9k82jMSI=" align="left" hspace="5" vspace="5" width="15%">	
+    	
+      <h4>Добро пожаловать ...</h4>
+    </header>
+    <main><!--*************************************************************-->	
+  <div class="brd">
+	<p>***   Калькулятор   ***</p>
+
+		<input type="text" size="2" value="425" id="inpa"> - цена продукта на ценнике, руб.<br>
+		<input type="text" size="2" value="890" id="inpb"> - вес/объём продукта на ценнике, (грамм/миллилитр)		
+		<br>
+<button onclick="calc()"><font size="1">Рассчитать цену продукта</font></button>
+ </div>
+      <p id="message0"></p><br>
+  
+	</main>
+
+<script language="JavaScript">
+		"use strict";    
+function calc(){
+			const a = Number(document.getElementById('inpa').value);
+			const b = Number(document.getElementById('inpb').value);
+			let c=Math.round(a*1000/b)
+
+document.getElementById("message0").innerHTML = " Итого: цена продукта на ценнике = " + a +" руб. <br>вес/объём продукта на ценнике =  " + b +" (грамм, миллилитр) <br> цена продукта за 1 (килограммг, литр) " + c +" руб" ;
+
+
+}
+</script>
+
+    <!--********************************БиоРитмы*****************************-->	
+ <div class="brd1">   
+      <button id="myButton_Био">БиоРитмы</button> Здесь можно посмотреть свои биоритмы на сегодня	
+ </div>	
+      <p id="message1"></p><br>
+
+<script language="JavaScript">
+		"use strict"; 
+document.getElementById("myButton_Био").onclick = function() {
+let year = prompt("Введите год", '2000');
+let month = prompt('Введите месяц', '01');
+let day = prompt('Введите день', '01') ;
+let date0 = new Date(year, month -1 , day);
+let now  = new Date();
+let diff0 = now.getTime() - date0.getTime();
+console.log(diff0);
+let diff =Math.round(diff0*10/(1000*60*60*24))/10
+
+let Zod =""
+let NumZ =""
+let Stih =""
+
+if ((Number(day) >= 22 && Number(month) == 12) || (Number(day) <= 20 && Number(month) == 1)) {
+ Zod = "КОЗЕРОГ";
+ NumZ = "  Ваше Число - 10";
+ Stih = "  Ваша Стихия - ЗЕМЛЯ";
+}
+
+if ((Number(day) >= 21 && Number(month) == 1) || (Number(day) <= 20 && Number(month) == 2)) {
+ Zod = "ВОДОЛЕЙ";
+ NumZ = "  Ваше Число - 11";
+ Stih = "  Ваша Стихия - Воздух";
+}
+
+if ((Number(day) >= 21 && Number(month) == 2) || (Number(day) <= 20 && Number(month) == 3)) {
+ Zod = "РЫБЫ";
+ NumZ = "  Ваше Число - 12";
+ Stih = "  Ваша Стихия - Вода";
+}
+
+if ((Number(day) >= 21 && Number(month) == 3) || (Number(day) <= 20 && Number(month) == 4)) {
+ Zod = "ОВЕН";
+ NumZ = "  Ваше Число - 1";
+ Stih = "  Ваша Стихия - ОГОНЬ";
+}
+
+if ((Number(day) >= 21 && Number(month) == 4) || (Number(day) <= 20 && Number(month) == 5)) {
+ Zod = "ТЕЛЕЦ";
+ NumZ = "  Ваше Число - 2";
+ Stih = "  Ваша Стихия - ЗЕМЛЯ";
+}
+
+if ((Number(day) >= 21 && Number(month) == 5) || (Number(day) <= 21 && Number(month) == 6)) {
+	
+ Zod = "БЛИЗНЕЦЫ";
+ NumZ = "  Ваше Число - 3";
+ Stih = "  Ваша Стихия - Воздух";
+}
+if ((Number(day) >= 22 && Number(month) == 6) || (Number(day) <= 22 && Number(month) == 7)) {
+	
+ Zod = "РАК";
+ NumZ = "  Ваше Число - 4";
+ Stih = "  Ваша Стихия - Вода";
+}
+if ((Number(day) >= 23 && Number(month) == 7) || (Number(day) <= 23 && Number(month) == 8)) {
+	
+ Zod = "ЛЕВ";
+ NumZ = "  Ваше Число - 5";
+ Stih = "  Ваша Стихия - ОГОНЬ";
+}
+if ((Number(day) >= 24 && Number(month) == 8) || (Number(day) <= 23 && Number(month) == 9)) {
+	
+ Zod = "ДЕВА";
+ NumZ = "  Ваше Число - 6";
+ Stih = "  Ваша Стихия - ЗЕМЛЯ";
+}
+if ((Number(day) >= 24 && Number(month) == 9) || (Number(day) <= 23 && Number(month) == 10)) {
+	
+ Zod = "ВЕСЫ";
+ NumZ = "  Ваше Число - 7";
+ Stih = "  Ваша Стихия - Воздух";
+}
+if ((Number(day) >= 24 && Number(month) == 10) || (Number(day) <= 22 && Number(month) == 11)) {
+	
+ Zod = "СКОРПИОН";
+ NumZ = "  Ваше Число - 8";
+ Stih = "  Ваша Стихия - Вода";
+}
+if ((Number(day) >= 23 && Number(month) == 11) || (Number(day) <= 21 && Number(month) == 12)) {
+	
+ Zod = "СТРЕЛЕЦ";
+ NumZ = "  Ваше Число - 9";
+ Stih = "  Ваша Стихия - ОГОНЬ";
+}
+let d = new Date();
+let date01 = new Date();
+
+
+let text100="<br> Сегодня " + now.toDateString() 
++" <br> Вы родились " + date0.toDateString()+ "<br> С момента  Вашего рождения прошло: " 
++ diff +" дней.<br> На текуший момент Ваш: " ;
+let text101;
+let text102;
+let text103;
+let delta_fiz = Math.round(diff*10/23)/10 - Math.floor(diff/23);
+let delta_emo = Math.round(diff*10/28)/10 - Math.floor(diff/28);
+let delta_int = Math.round(diff*10/33)/10 - Math.floor(diff/33);
+
+  
+if (delta_fiz<=0.05 || delta_fiz>0.98) {
+  text101="<br> - физический цикл = точка перхода (минус=>плюс) ";
+} else if (delta_fiz>0.05 && delta_fiz<=0.48) {
+  text101="<br> - физический цикл = плюс   ";	
+} else if (delta_fiz>0.48 && delta_fiz<=0.52) {
+  text101="<br> - физический цикл = точка перехода (плюс=>минус)   ";
+} else if (delta_fiz>0.52 && delta_fiz<=0.98) {
+  text101="<br> - физический цикл = минус   ";
+} else {
+  text101="<br> - физический цикл = точка перехода (минус=>плюс)   ";
+}
+
+if (delta_emo<=0.05 || delta_emo>0.98) {
+  text102="<br> - эмоциональный цикл = точка перехода (минус=>плюс) ";
+} else if (delta_emo>0.05 && delta_emo<=0.48) {
+  text102="<br> - эмоциональный цикл = плюс   ";	
+} else if (delta_emo>0.48 && delta_emo<=0.52) {
+  text102="<br> - эмоциональный цикл = точка перехода (плюс=>минус)  ";
+} else if (delta_emo>0.52 && delta_emo<=0.98) {
+  text102="<br> - эмоциональный цикл = минус  ";
+} else {
+  text102="<br> - эмоциональный цикл = точка перехода (минус=>плюс) ";
+}
+
+if (delta_int<=0.05 || delta_int>0.98) {
+  text103="<br> - интеллектуальный цикл = точка перехода (минус=>плюс) ";
+} else if (delta_int>0.05 && delta_int<=0.48) {
+  text103="<br> - интеллектуальный цикл = плюс  ";	
+} else if (delta_int>0.48 && delta_int<=0.52) {
+  text103="<br> - интеллектуальный цикл = точка перехода (плюс=>минус)  ";
+} else if (delta_int>0.52 && delta_int<=0.98) {
+  text103="<br> - интеллектуальный цикл = минус   ";
+} else {
+  text103="<br> - интеллектуальный цикл = точка перехода (минус=>плюс) ";
+}
+
+document.getElementById("message1").innerHTML =text100+text101+text102+text103
+
+
+
+};
+
+	
+</script>    
+	
+	<nav><!--*************************************************************-->	
+
+		<ul>
+			<li><a href="http://www.stihi.ru/avtor/orbison">Стихи.ру</a>
+			<li><a href="https://www.litprichal.ru/users/evgol52/">Литпричал.ру</a>
+			<li><a href="https://www.chitalnya.ru/work/3793164/">Изба-Читальня.ру</a>
+			<li><a href="https://golubevevg52.tilda.ws/">Сайт-визитка</a>
+			<li><a href="https://my.mail.ru/music/search/%D0%9C%D0%BE%D1%80%D0%B8%D1%81%20%D0%A0%D0%B0%D0%B2%D0%B5%D0%BB%D1%8C%20-%20%D0%91%D0%BE%D0%BB%D0%B5%D1%80%D0%BE%20%D1%81%D0%BB%D1%83%D1%88%D0%B0%D1%82%D1%8C%20%D0%B2%D1%81%D0%B5%D0%BC
+">Болеро Равеля</a>
+		</ul>
+	</nav>
+	
+ <!--*************************************************************-->	
+  <div class="brd2">	
+	
+	<p><font size="3">Песня про все не так</font</p><br>
+<audio id="myAudio" controls>
+  <!--source src="все не так.ogg" type="audio/ogg"-->
+  <source src="все не так.mp3" type="audio/mpeg">
+</audio>
+
+<p><font size="3">Песня Кибера про сапиенсов</font</p><br>
+<audio id="myAudio" controls>
+  <!--source src="Кибер2.ogg" type="audio/ogg"-->
+  <source src="Кибер2.mp3" type="audio/mpeg">
+</audio>
+ </div>	
+<br>
+ 
+  <!--*******************************Идеальная попа*****************************-->	
+<img src=" https://i.pinimg.com/736x/76/62/a2/7662a28b7f8c68f420e1a3e1aa4af874.jpg" align="left" hspace="5" vspace="5" width="15%">	
+ 
+ 
+	<p>***   Идеальная попа   ***</p>
+
+		<input type="text1" size="2" value="60" id="inpa1"> - талия, см  <br>
+		<input type="text1" size="2" value="90" id="inpb1"> - бёдра, см	<br>	
+		<br> 
+ 
+ <div class="brd3">
+ <button onclick="calc1()"><font size="1">Проверьте себя</font></button>
+	  Профессор Мэннинг из университета Ланкашира вывел оптимальное
+	  соотношение между женской талией и ягодицами. Он вывел формулу:
+	  объем талии, поделенный на объем бедер, должен давать коэффициент 0,7.
+	  Это - эталон. Идеальной попой обладает Кайли Миноуг. Ее индекс - 0,702.
+	  Далее - Гизеле Бюндхен (талия - 61 см, объем бедер - 86 см) - индекс 0,708.
+	  А у Вас?	
+ </div>
+      <p id="message2"></p><br>
+	  
+ <script language="JavaScript">
+		"use strict";
+//********************************Идеальная женская фигура********************************************
+		
+function calc1(){
+			let a1 = Number(document.getElementById('inpa1').value);
+			let b1 = Number(document.getElementById('inpb1').value);
+			let c1=Math.round(a1*100/b1)/100;
+			let popa;
+			
+			if(c1 < 0.695) {
+				popa="Ваш индекс - "+c1+". Не может быть!!!";
+			
+			}else if (c1 >= 0.695 && c1 < 0.702) {
+
+				popa="Ваш индекс - "+c1+". Поздравляем! Ваша попа - лучшая на планете! Вы превзошли саму Кайли Миноуг!";
+
+			}else if (c1 >= 0.702 && c1 < 0.71) {
+				popa="Ваш индекс - "+c1+". Поздравляем! Ваша попа входит в первую десятку лучших поп на планете!";
+			}else if (c1 >= 0.71 && c1 < 0.75) {
+				popa="Ваш индекс - "+c1+". Очень неплохо! Так держать!";
+			}else if (c1 >= 0.75 && c1 < 0.8) {
+				popa="Ваш индекс - "+c1+". Нормально! Но можно показатели улучшить!";
+			}else if (c1 >= 0.8 && c1 < 0.9) {
+				popa="Ваш индекс - "+c1+". Работайте над собой и все придет!";
+			}else if (c1 >= 0.9 && c1 < 1) {
+			
+			
+			
+			}else{
+				popa="Ваш индекс - "+c1+". Н-да-а...";
+
+			};
+			
+let text200
+let text201
+
+
+text200=" Итого у Вас:<br> талия = " + a1 +" см <br>бёдра =  " + b1 +" <br>" +popa ;	
+//document.write(popa);
+document.getElementById("message2").innerHTML =text200;
+		
+};	
+</script>  
+
+  <!--*************************************************************-->	
+<br>
+<img src=" https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg" align="left" hspace="5" vspace="5" width="15%">	
+ 
+ 
+	<p>***   Немного школьной арифметики   ***</p>
+
+		Найти сумму чисел от 1 до ... <input type="text2" size="2" value="100" id="inpa2">  <br>
+		<!--input type="text2" size="2" value="90" id="inpb2"--> 	<br>	
+		<br> 
+ 
+ <div class="brd4">
+ <button onclick="calc2()"><font size="3">Проверьте себя</font></button>
+	  Говорят, что на одном из уроков, учитель математики решил дать 
+	  задание для класса, в котором учился Гаусс, с таким расчетом, чтобы
+	  подольше занять учащихся. Недолго думая, педагог предложил обучающимся
+	  найти сумму чисел от 1 до 100: S=1+2+3+...+100. 
+      Юный (10 лет) Карл Фридрих Гаусс, уже с этого возраста отличавшийся
+	  незаурядными способностями, решил задачу практически мгновенно!	
+	  Учитель не поверил и собрался высечь мальчика за ложь, но ... оказалось,
+что мальчик вывел формулу, по которой и произвел расчеты.	А Вы можете посчитать?  
+Результат можете проверить. Программа посчитает для Вас. И не только для числа 100, 
+но и любого другого, например для числа 12345	  
+
+ </div>
+       <p id="message3"></p><br>
+<br>
+ <script language="JavaScript">
+		"use strict";
+//********************************у Гаусса********************************************
+		
+function calc2(){
+			let a2 = Number(document.getElementById('inpa2').value);
+			//let b1 = Number(document.getElementById('inpb1').value);
+			let c2=Math.round(a2*(a2+1)/2);
+	
+			
+//document.write(" Итого у Гаусса:<br> Сумма чисел от 1 до  "+a2+" = "+c2);	
+document.getElementById("message3").innerHTML =" Итого у Гаусса:<br> Сумма чисел от 1 до  "+a2+" = "+c2
+
+		
+};	
+</script> 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="brd5">
+
+
+Три друга - Дима, Миша и Максим - увлекались тремя разными 
+видами спорта - теннисом, футболом и баскетболом.
+Каким видом спорта увлекался каждый из них, если Дима не 
+играет в баскетбол, а Миша не любит игры с мячом? Ниже показано,
+как в Excel легко и просто ПОЭТАПНО решается этот класс логических задач.
+<img src="логика.jpg" align="left" hspace="5" vspace="5" width="100%">	
+
+ </div>
+<br>
+<br><br><br><br><br>
+	
+ <div class="brd6">
+Если понятно, то вот еще задачка с интернета этого класса:
+Браун, Гриффит, Клеменс и Грин - четверо студентов 
+университетов разных стран приехали на международный 
+фестиваль молодежи и студентов. Один из них - канадец, второй 
+- американец, третий - англичанин, четвертый - австралиец. 
+Браун и Клеменс были на концерте, в котором принимал участие 
+их знакомый англичанин. Гриффит и австралиец знакомы, так как 
+пели дуэтом под аккомпанемент их знакомого американца. 
+Австралиец пригласил к себе в гости своего знакомого Грина и 
+собирается пригласить своего знакомого Брауна. Определите 
+национальности студентов, если Браун не американец.
+
+ </div>
+<br><br>	
+	
+	<footer><!--*************************************************************-->	
+
+      <p><font size="3">© 2026 Все права защищены.</font</p>
+      <p><font size="3">Евгений, golubevevg@yandex.ru</font</p>
+
+    </footer>
+    <!--script src="script.js"></script-->
+  
+  </body>    <!--*************************************************************-->	
+
+</html>

@@ -1,0 +1,92 @@
+﻿body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #5570f0;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  width: 80%;
+  height: 55px;  
+}
+
+main {
+  padding: 5px;
+}
+
+footer {
+  background-color: #5570f0;
+  color: white;
+  text-align: center;
+  padding: 5px;
+
+  width: 80%;
+  height: 70px;
+  bottom: 0;
+}
+
+.brd {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:130px;   
+}
+
+.container {
+  width: 540px;
+  height: 200px;
+  overflow: auto;
+  border: 5px solid #ccc;
+}  
+
+.brd1 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:40px;   
+}
+
+.brd2 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:180px;   
+}
+
+.brd3 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:150px;   
+}
+
+.brd4 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:220px;   
+}
+
+.brd5 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:240px;   
+}
+
+.brd6 {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	width: 77%;
+	height:240px;   
+}
+
